@@ -2,7 +2,7 @@ ERL          ?= erl
 EBIN_DIRS    := $(wildcard deps/*/ebin)
 APP          := wwallo
 
-all: erl ebin/$(APP).app
+all: dirs erl ebin/$(APP).app
 
 erl:
 	@$(ERL) -pa $(EBIN_DIRS) -noinput +B \
@@ -10,6 +10,9 @@ erl:
 
 docs:
 	@erl -noshell -run edoc_run application '$(APP)' '"."' '[]'
+
+dirs:
+	-@mkdir -p deps ebin priv/log priv/tmp/trace  
 
 clean: 
 	@echo "removing:"
