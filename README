@@ -53,9 +53,11 @@ HOWTO
 
 4. Create symbolic links to the directories of the dependencies.
 
+    mkdir deps
     cd deps
-    ln -s /path/to/rfc4627 # rfc4627 contains the ebin directory
-    ln -s /path/to/egeoip  # egeoip contains the ebin directory
+    ln -s /path/to/webmachine # webmachine contains the ebin directory
+    ln -s /path/to/rfc4627    # rfc4627 contains the ebin directory
+    ln -s /path/to/egeoip     # egeoip contains the ebin directory
 
 
 5. Start the server:
