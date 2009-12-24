@@ -16,10 +16,10 @@ var wwallo = function() {
     var country = 'An Unknown Country';
 
     return {
-        'city': function (v) {
+        'city': function () {
             return city;
         },
-        'country': function (v) {
+        'country': function () {
             return country;
         },
         'error': function (v) {
@@ -85,6 +85,7 @@ function get_position() {
     }
 
     var geo = wwallo.geo() || google.gears.factory.create('beta.geolocation');
+    wwallo.geo(geo);
     wwallo.error(undefined);
     geo.getCurrentPosition(update_position, noposition, {
                 enableHighAccuracy: true,
