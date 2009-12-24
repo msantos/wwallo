@@ -1,0 +1,21 @@
+
+* Add an option to suppress viewed tweets
+
+* Add support for lang. Take the language from the browser:
+
+    http://search.twitter.com/search.atom?q=erlang&rpp=100&page=2&lang=en
+
+* Don't show stemmed words, show the (first matching?) word
+
+* Before stemming, compare the words to a bloom filter of the dictionnary
+
+* Generate options in the select menus
+
+* Catch errors returned by twitter, i.e., request limits
+
+* Add support for history (number of tweets retrieved)
+
+* Add province/state to location header, when available
+
+* Add support for other geolocation sources beside twitter
+
