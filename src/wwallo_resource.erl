@@ -1,6 +1,6 @@
-%% @author author <author@example.com>
-%% @copyright YYYY author.
-%% @doc Example webmachine_resource.
+%% @author Michael Santos <michael.santos@gmail.com>
+%% @copyright 2009 Michael Santos.
+%% @doc Provides resources for tweets based on geolocation.
 
 -module(wwallo_resource).
 -export([
