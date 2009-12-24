@@ -1,0 +1,111 @@
+
+
+wwallo is a tag cloud for wherever you happen to be.
+
+
+WHY?
+
+Wouldn't it be cool if locations were tagged just like websites?
+
+If you're stuck in traffic or wandering through an unfamiliar place,
+your location is tagged by what people have been saying around you.
+Maybe they're in a frenzy about an accident that has traffic at a
+standstill or ranting about some local event. Maybe the buzz is
+about the outbreak of the zombie plague (in which case you should
+get out of there ASAP :)
+
+
+WHAT AND WHY?
+
+wwallo is a twitter client and an excuse to experiment with the
+kickass WebMachine, jQuery (and a lot of jQuery plugins) and the
+geolocation features of Google Gears.
+
+wwallo geolocates the client by using Google Gears (tested with the
+web browser on an Android phone and firefox on Mac OS X and Ubuntu).
+If Gears is not installed, wwallo falls back to using the IP address
+to lookup the client's location. Finally, if the client source IP
+address is within the private range, wwallo resorts to using its
+public IP address.
+
+
+DEPENDENCIES
+
+rfc4627 JSON parser: http://hg.opensource.lshift.net/erlang-rfc4627/archive/default.tar.gz
+
+egeopip: http://code.google.com/p/egeoip/source/checkout
+
+
+HOWTO
+
+1. Download and build rfc4627 and egeoip.
+
+2. Download the GeoLite database from MaxMind and place it in the egeoip/priv directory:
+
+    cd egeoip/priv
+    wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
+
+3. Check out wwallo and build.  mochiweb is set to listen on port
+8585. The port can be changed in src/wwallo_sup.erl.
+
+    cd wwallo
+    make
+
+4. Create symbolic links to the directories of the dependencies.
+
+    cd deps
+    ln -s /path/to/rfc4627 # rfc4627 contains the ebin directory
+    ln -s /path/to/egeoip  # egeoip contains the ebin directory
+
+
+5. Start the server:
+
+    ./start-dev.sh
+
+6. Open your browser:
+
+    http://localhost:8585/
+
+
+COMPONENTS
+
+WebMachine: http://webmachine.basho.com/
+jQuery: http://jquery.com/
+Google Gears: http://gears.google.com/
+egeoip: http://code.google.com/p/egeoip/
+Erlang rfc4627 JSON parser: http://www.lshift.net/blog/2007/02/17/json-and-json-rpc-for-erlang
+Erlang stemmer: http://github.com/klajo/hacks/blob/master/stem/src/stem_en.erl
+
+jQuery Plugins:
+jquery.corner
+jGrowl
+jquery.loading
+jquery.selectbox
+jquery.tagcloud
+
+This product includes GeoLite data created by MaxMind, available from http://maxmind.com/
+
+
+The remainder is license under the MIT license:
+
+Copyright (c) 2009 Michael Santos <michael.santos@gmail.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
