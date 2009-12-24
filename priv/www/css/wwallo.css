@@ -1,0 +1,108 @@
+
+body {
+    width: 90%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img.Profile {
+    vertical-align: text-top;
+    float: left;
+    margin: 1px;
+    width: 48px; 
+    height: 48px; 
+}
+
+.Location {
+    background-color:       #000;
+    color:                  #fff;
+    opacity:                .85;
+
+    font-weight: bold;
+    line-height: 210%;
+    text-align: center
+}
+
+.Menu {
+    background-color:       #fff;
+    color:                  #000;
+    opacity:                .85;
+
+    font-weight: bold;
+    line-height: 100%;
+    text-align: center
+}
+
+.SubMenu {
+    background-color:       #fff;
+    color:                  #000;
+    opacity:                .85;
+
+    font-size: x-small;
+    text-align: center
+}
+
+.Hidden {
+    display: none;
+}
+
+.Author {
+    font-weight: bold;
+}
+
+.Message {
+    font-size: small;
+}
+
+.Alert {
+    background-color: #FF3300;
+}
+
+.Gears {
+    background-color: #99FF00;
+}
+
+.loading {
+    background: #000;
+    color: white;
+    font-weight: bold;
+    padding: 3px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.loading-img, .loading-element {
+    background: transparent;
+    padding: 0px;
+}
+.loading.top {
+-moz-border-radius-topleft: 0px;
+-moz-border-radius-topright: 0px;
+-webkit-border-top-left-radius: 0px;
+-webkit-border-top-right-radius: 0px;
+}
+.loading.left {
+-moz-border-radius-topleft: 0px;
+-moz-border-radius-bottomleft: 0px;
+-webkit-border-top-left-radius: 0px;
+-webkit-border-bottom-left-radius: 0px;
+}
+.loading.bottom {
+-moz-border-radius-bottomleft: 0px;
+-moz-border-radius-bottomright: 0px;
+-webkit-border-bottom-left-radius: 0px;
+-webkit-border-bottom-right-radius: 0px;
+}
+.loading.right {
+-moz-border-radius-topright: 0px;
+-moz-border-radius-bottomright: 0px;
+-webkit-border-top-right-radius: 0px;
+-webkit-border-bottom-right-radius: 0px;
+}
+.loading-error {
+color: #FFF;
+background: red;
+}
+
