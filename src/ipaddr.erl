@@ -20,7 +20,7 @@
 
 
 find(IP) ->
-    {ok, {{"HTTP/1.1",200,"OK"}, _Headers, Body}} = http:request(get, {?URL, []}, [], []),
+    {ok, {{"HTTP/1.1",200,"OK"}, _Headers, Body}} = http:request(?URL),
     case validip(Body) of
         true -> Body;
         false -> IP
