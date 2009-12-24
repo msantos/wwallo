@@ -75,6 +75,7 @@ Google Gears: http://gears.google.com/
 egeoip: http://code.google.com/p/egeoip/
 Erlang rfc4627 JSON parser: http://www.lshift.net/blog/2007/02/17/json-and-json-rpc-for-erlang
 Erlang stemmer: http://github.com/klajo/hacks/blob/master/stem/src/stem_en.erl
+WebMachine static resource: http://bitbucket.org/bryan/wmexamples/
 
 jQuery Plugins:
 jquery.corner
