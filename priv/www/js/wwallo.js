@@ -161,6 +161,7 @@ function display_messages(json, tag) {
             $.jGrowl(tweet, {
                 'sticky': true,
                 'closeTemplate': '',
+                'beforeOpen': function (e,m,o) { $('html, body').animate({scrollTop:0}, 'slow') }
                 });
             }
             });
