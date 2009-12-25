@@ -1,6 +1,7 @@
 
 body {
     width: 90%;
+    margin:0 auto;
 }
 
 a {
@@ -23,7 +24,7 @@ img.Profile {
 
     font-weight: bold;
     line-height: 210%;
-    text-align: center
+    text-align: center;
 }
 
 .Menu {
@@ -33,7 +34,7 @@ img.Profile {
 
     font-weight: bold;
     line-height: 100%;
-    text-align: center
+    text-align: center;
 }
 
 .SubMenu {
@@ -42,7 +43,7 @@ img.Profile {
     opacity:                .85;
 
     font-size: x-small;
-    text-align: center
+    text-align: center;
 }
 
 .Hidden {
