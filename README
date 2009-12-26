@@ -17,9 +17,9 @@ get out of there ASAP :)
 
 WHAT AND WHY?
 
-wwallo is a twitter client and an excuse to experiment with the
-kickass WebMachine, jQuery (and a lot of jQuery plugins) and the
-geolocation features of Google Gears.
+wwallo is a twitter client and an excuse to experiment with (the
+kickass) WebMachine, jQuery (and a lot of awesome jQuery plugins)
+and the geolocation features of Google Gears.
 
 wwallo geolocates the client by using Google Gears (tested with the
 web browser on an Android phone and firefox on Mac OS X and Ubuntu).
@@ -27,6 +27,13 @@ If Gears is not installed, wwallo falls back to using the IP address
 to lookup the client's location. Finally, if the client source IP
 address is within the private range, wwallo resorts to using its
 public IP address.
+
+
+DEMO
+
+Test server, may not always be available:
+
+    http://tinyurl.com/wwallo
 
 
 DEPENDENCIES
@@ -80,16 +87,16 @@ Erlang stemmer: http://github.com/klajo/hacks/blob/master/stem/src/stem_en.erl
 WebMachine static resource: http://bitbucket.org/bryan/wmexamples/
 
 jQuery Plugins:
-jquery.corner
-jGrowl
-jquery.loading
-jquery.selectbox
-jquery.tagcloud
+jquery.corner: http://malsup.com/jquery/corner/
+jGrowl: http://stanlemon.net/projects/jgrowl.html
+jquery.loading: http://plugins.jquery.com/project/loading
+jquery.selectbox: http://www.brainfault.com/jquery-plugins/jquery-selectbox-replacement/
+jquery.tagcloud: http://code.google.com/p/jquery-tagcloud/
 
 This product includes GeoLite data created by MaxMind, available from http://maxmind.com/
 
 
-The remainder is license under the MIT license:
+Any remaining code written by me can be used under the MIT license:
 
 Copyright (c) 2009 Michael Santos <michael.santos@gmail.com>
 
