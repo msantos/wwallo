@@ -51,6 +51,8 @@ reduce([H|T], Acc) ->
     L = [ stem_en:stem(N) || N <- Words, filter(N) ],
     reduce(T, [L|Acc]).
 
+count([]) ->
+    [];
 count([H|T]) ->
     count(T, {H,1}, []).
 count([], N, Acc) ->
