@@ -51,7 +51,7 @@ var wwallo = function() {
         },
         'units': function (v) {
             return (v ? units = v : units);
-        },
+        }
     }
 }();
 
@@ -89,9 +89,7 @@ function get_position() {
     wwallo.error(undefined);
     geo.getCurrentPosition(update_position, noposition, {
                 enableHighAccuracy: true,
-                gearsRequestAddress: true,
-                //timeout: 120,
-                //maximumAge: 0,
+                gearsRequestAddress: true
                 }
             );
 }
