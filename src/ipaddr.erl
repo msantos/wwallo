@@ -26,16 +26,16 @@ find(IP) ->
         false -> IP
     end.
 
-ipv4(N) when is_list(N) ->
-    ipv4(N, inet_aton(N)).
-ipv4(_,N) when N >= ?CLASSA_MIN, N =< ?CLASSA_MAX ->
-    find(N); 
-ipv4(_,N) when N >= ?CLASSB_MIN, N =< ?CLASSB_MAX ->
-    find(N); 
-ipv4(_,N) when N >= ?CLASSC_MIN, N =< ?CLASSC_MAX ->
-    find(N); 
-ipv4(_,N) when N >= ?CLASSLOOP_MIN, N =< ?CLASSLOOP_MAX ->
-    find(N); 
+ipv4(L) when is_list(L) ->
+    ipv4(L, inet_aton(L)).
+ipv4(L,N) when N >= ?CLASSA_MIN, N =< ?CLASSA_MAX ->
+    find(L); 
+ipv4(L,N) when N >= ?CLASSB_MIN, N =< ?CLASSB_MAX ->
+    find(L); 
+ipv4(L,N) when N >= ?CLASSC_MIN, N =< ?CLASSC_MAX ->
+    find(L); 
+ipv4(L,N) when N >= ?CLASSLOOP_MIN, N =< ?CLASSLOOP_MAX ->
+    find(L); 
 ipv4(L,_) ->
     L.
 
