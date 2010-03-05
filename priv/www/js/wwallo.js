@@ -1,6 +1,5 @@
 
 var wwallo = function() {
-    var geo = undefined;
     var radius = '5';
     var units = 'km';
     var search = '';
@@ -24,9 +23,6 @@ var wwallo = function() {
         },
         'error': function (v) {
             return (v ? error = v : error);
-        },
-        'geo': function (v) {
-            return (v ? geo = v : geo);
         },
         'address': function (v) {
             return (v ? address = v : address);
@@ -57,7 +53,7 @@ var wwallo = function() {
 
 
 function update_position(position) {
-    var pos = position.latitude + ',' + position.longitude + ',' + wwallo.radius() + wwallo.units();
+    var pos = position.coords.latitude + ',' + position.coords.longitude + ',' + wwallo.radius() + wwallo.units();
     $.getJSON('/geocode/' + pos, function (json) {
             wwallo.json(json);
             wwallo.pos(pos);
@@ -79,19 +75,13 @@ function noposition(positionError, url) {
 }
 
 function get_position() {
-    if (typeof google == 'undefined' || typeof google.gears == 'undefined') {
+    if (!geo_position_js.init()) {
         noposition();
         return (true);
     }
 
-    var geo = wwallo.geo() || google.gears.factory.create('beta.geolocation');
-    wwallo.geo(geo);
     wwallo.error(undefined);
-    geo.getCurrentPosition(update_position, noposition, {
-                enableHighAccuracy: true,
-                gearsRequestAddress: true
-                }
-            );
+    geo_position_js.getCurrentPosition(update_position, noposition);
 }
 
 function main_screen(json, pos) {
