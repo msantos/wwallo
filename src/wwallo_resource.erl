@@ -30,6 +30,9 @@ to_json(ReqData, Context) ->
 resource_exists(ReqData, _Context) ->
     handle_request(wrq:path_tokens(ReqData), ReqData, _Context).
 
+handle_request(["null,"], ReqData, Context) ->
+        handle_request(["null,5km"], ReqData, Context);
+
 handle_request(["null," ++ Distance], ReqData, _Context) ->
     Peer = ipaddr:ipv4(wrq:peer(ReqData)),
     {ok, Rec} = egeoip:lookup(Peer),
